@@ -16,11 +16,12 @@
         <input class="search__input" type="search" name="search" placeholder="Поиск по сайту">
         <button class="search__btn" type="submit" name="search-btn"><span>Найти</span></button>
       </form>
+      <div class="catalog-overlay"></div>
       <a class="catalog-menu-btn main-header__catalog-menu-btn text-services-b" href="#">Каталог товаров</a>
       <div class="catalog-menu">
         <ul class="catalog-menu__column">
           <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Виртуальная реальность</a></li>
-          <li class="catalog-menu__item"><a class="catalog-menu__link">Моноподы для селфи</a></li>
+          <li class="catalog-menu__item"><a class="catalog-menu__link active">Моноподы для селфи</a></li>
           <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Экшн-камеры</a></li>
         </ul>
         <ul class="catalog-menu__column">
@@ -86,44 +87,41 @@
           </fieldset>
           <fieldset class="checkbox-block filter-side__item">
             <legend class="checkbox-block__title text-product-name">Цвет</legend>
-            <label class="checkbox-block__name text-catalog-input">
-                <input class="checkbox-block__input" type="checkbox" name="color-black" checked>
-                <span class="checkbox-block__indicator"></span>
-                Черный
-              </label>
-            <label class="checkbox-block__name text-catalog-input">
-                <input class="checkbox-block__input" type="checkbox" name="color-white">
-                <span class="checkbox-block__indicator"></span>
-                Белый
-              </label>
-            <label class="checkbox-block__name text-catalog-input">
-                <input class="checkbox-block__input" type="checkbox" name="color-blue" checked>
-                <span class="checkbox-block__indicator"></span>
-                Синий
-              </label>
-            <label class="checkbox-block__name text-catalog-input">
-                <input class="checkbox-block__input" type="checkbox" name="color-red" checked>
-                <span class="checkbox-block__indicator"></span>
-                Красный
-              </label>
-            <label class="checkbox-block__name text-catalog-input">
-                <input class="checkbox-block__input" type="checkbox" name="color-pink">
-                <span class="checkbox-block__indicator"></span>
-                Розовый
-              </label>
+            <ul class="checkbox-block__list">
+              <li class="checkbox-block__item">
+                <input class="checkbox-block__input" type="checkbox" name="color-black" id="color-black-id" checked>
+                <label for="color-black-id" class="checkbox-block__name text-catalog-input">Черный</label>
+              </li>
+              <li class="checkbox-block__item">
+                <input class="checkbox-block__input" type="checkbox" name="color-white" id="color-white-id">
+                <label for="color-white-id" class="checkbox-block__name text-catalog-input">Белый</label>
+              </li>
+              <li class="checkbox-block__item">
+                <input class="checkbox-block__input" type="checkbox" name="color-blue" id="color-blue-id" checked>
+                <label for="color-blue-id" class="checkbox-block__name text-catalog-input">Синий</label>
+              </li>
+              <li class="checkbox-block__item">
+                <input class="checkbox-block__input" type="checkbox" name="color-red" id="color-red-id" checked>
+                <label for="color-red-id" class="checkbox-block__name text-catalog-input">Красный</label>
+              </li>
+              <li class="checkbox-block__item">
+                <input class="checkbox-block__input" type="checkbox" name="color-pink" id="color-pink-id">
+                <label for="color-pink-id" class="checkbox-block__name text-catalog-input">Розовый</label>
+              </li>
+            </ul>
           </fieldset>
           <fieldset class="radio-block filter-side__item">
             <legend class="radio-block__title text-product-name">Bluetooth</legend>
-            <label class="radio-block__name text-catalog-input">
-                <input class="radio-block__input" type="radio" name="bluetooth" value="true" checked>
-                <span class="radio-block__indicator"></span>
-                Есть
-              </label>
-            <label class="radio-block__name text-catalog-input">
-                <input class="radio-block__input" type="radio" name="bluetooth" value="false">
-                <span class="radio-block__indicator"></span>
-                Нет
-              </label>
+            <ul class="radio-block__list">
+              <li class="radio-block__item">
+                <input class="radio-block__input" type="radio" name="bluetooth" value="true" id="true-id" checked>
+                <label for="true-id" class="radio-block__name text-catalog-input">Есть</label>
+              </li>
+              <li class="radio-block__item">
+                <input class="radio-block__input" type="radio" name="bluetooth" value="false" id="false-id">
+                <label for="false-id" class="radio-block__name text-catalog-input">Нет</label>
+              </li>
+            </ul>
           </fieldset>
           <button class="btn btn--mid filter-side__btn text-services-b" type="submit">Показать</button>
         </form>
@@ -170,7 +168,7 @@
         </div>
         <img class="product__img" width="360" height="380" src="img/catalog/product-item-2.jpg" alt="Профессиональная селфи-палка">
         <div class="product__attributes">
-          <a class="product__link" href="#"><h2 class="product__name text-product-name">Профессиональная<br>селфи-палка</h2></a>
+          <a class="product__link" href="#"><h2 class="product__name text-product-name">Профессиональная селфи-палка</h2></a>
           <span class="product__price">1 500 руб.</span>
         </div>
       </article>
@@ -211,9 +209,8 @@
   <footer class="main-footer">
     <div class="container">
       <div class="main-footer__top-row">
-        <a class="logo main-footer__logo logo--footer" href="index.html">Deviсe</a>
+        <a class="logo main-footer__logo logo--footer main-footer__logo--catalog" href="index.html">Deviсe</a>
         <div class="to-right">
-          <a class="user-name main-footer__user-name text-services-s text-main-footer" href="#">Валентин Петухов</a>
           <a class="sign-out main-footer__sign-out text-services-s text-main-footer" href="#">Выйти</a>
           <a class="compare main-footer__compare text-services-s text-main-footer" href="#">Сравнить</a>
           <a class="basket main-footer__basket text-services-s text-main-footer" href="#">Корзина</a>
@@ -233,11 +230,14 @@
           <a class="social-block__btn tw" href="#">tw</a>
         </div>
         <div class="to-right">
-          <a class="copyright" href="https://htmlacademy.ru">HTML Academy</a>
+          <a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
         </div>
       </div>
     </div>
   </footer>
+
+  <script src="js/catalog-menu.min.js"></script>
+
 </body>
 
 </html>
